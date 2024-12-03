@@ -1,6 +1,6 @@
 # Planning-Lab
 
-Code for the Planning lab of *Planning and Automated Reasoning* course, MSc degree in Artificial Intelligence 2023/2024, University of Verona
+Code for the Planning lab of the *Planning and Automated Reasoning* course, MSc degree in Artificial Intelligence 2024/2025, University of Verona
 
 ## Setup 
 
