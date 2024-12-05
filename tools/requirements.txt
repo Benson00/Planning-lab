@@ -1,0 +1,5 @@
+jupyter
+gym
+tqdm
+unified-planning
+up-fast-downward

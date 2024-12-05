@@ -4,7 +4,7 @@ Code for the Planning lab of the *Planning and Automated Reasoning* course, MSc 
 
 ## Setup 
 
-1. Download and install [Miniconda](https://docs.anaconda.com/miniconda/install/) for your System.
+1. Make sure to have Python installed in your System.
 
 2. Install Git:
    - On **Linux/Mac**: 
@@ -13,21 +13,32 @@ Code for the Planning lab of the *Planning and Automated Reasoning* course, MSc 
    - On **Windows**:
      - Download [here](https://gitforwindows.org/)
 
-3. Setup Conda environment:
+3. Setup virtual environment:
    - `git clone https://github.com/Isla-lab/Planning-lab`
-   - `conda env create -f tools/planning-lab-env.yml`
+   - `cd Planning-lab`
+   - `python -m venv planning-lab-venv`
+
+4. Activate the virtual environment:
+   - On **Linux/Mac**: 
+     - `source planning-lab-venv/bin/activate` 
+
+   - On **Windows**:
+     - `planning-lab-venv\Scripts\activate`
+
+5. Install dependencies:
+   - Run `pip install -r tools/requirements.txt`
+  
 
 
 ## Using the Jupyter Notebook
 
-To start the environment and work on your assignments, navigate to the downloaded folder root *(Planning-Lab)* and run:
+To start the environment and work on your assignments, navigate to the downloaded folder root *(Planning-Lab)*, *activate your environment* and run:
 
 ```
-conda activate planning-lab
 jupyter notebook
 ```
 
-The last command will open your browser for you to start working. To open the tutorial navigate with your browser to the current lesson notebook (*Lesson_\*/lesson_\*_problem.ipynb*).
+The last command will open your browser for you to start working. Navigate with your browser to the current lesson notebook in the dedicated folder.
 
 
 
