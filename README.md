@@ -4,7 +4,7 @@ Code for the Planning lab of the *Planning and Automated Reasoning* course, MSc 
 
 ## Setup 
 
-1. Make sure to have Python installed in your System.
+1. Make sure to have Python installed in your System. You can check that by running `python --version`.
 
 2. Install Git:
    - On **Linux/Mac**: 
