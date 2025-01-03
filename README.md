@@ -32,13 +32,13 @@ Code for the Planning lab of the *Planning and Automated Reasoning* course, MSc 
 
 ## Using the Jupyter Notebook
 
-To start the environment and work on your assignments, navigate to the downloaded folder root *(Planning-Lab)*, *activate your environment* and run:
+To start the environment and work on your assignments, navigate to the downloaded folder root *(Planning-Lab)*, *activate your environment*, enter the current lesson folder and run:
 
 ```
 jupyter notebook
 ```
 
-The last command will open your browser for you to start working. Navigate with your browser to the current lesson notebook in the dedicated folder.
+The last command will open your browser for you to start working. 
 
 
 
