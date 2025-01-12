@@ -41,6 +41,7 @@ class ObsGrid(Env):
         self.action_space = spaces.Discrete(len(self.actions))
         self.observation_space = spaces.Discrete(len(self.grid))
         self.staterange = range(self.observation_space.n)  # For random sampling actions from a given distribution
+        self.states = self.staterange
         # Precompute transition function T(s, a, s') and reward function R(s, a, s')
         self.T = np.zeros((self.observation_space.n, self.action_space.n, self.observation_space.n))
         self.R = np.zeros((self.observation_space.n, self.action_space.n, self.observation_space.n))
@@ -92,6 +93,8 @@ class ObsGrid(Env):
         #self.RS[-1] = 1
         self.seed(1)
         self.reset()
+
+        self.Pr = self.T
 
     def is_terminal(self, state):
         raise NotImplementedError
@@ -182,3 +185,13 @@ class ObsGrid(Env):
             if self.grid[state] == "G" or self.grid[state] == 'P':
                 terminal_states.append(state)
         return terminal_states
+    
+    def gamma(self, state, action):
+        if action is None:
+            return []
+        reachable_states = []
+        for next_state in self.staterange:
+            if self.grid[next_state] != 'W' and self.T[state, action, next_state] > 0:
+                reachable_states.append(next_state)
+        return reachable_states
+    
